@@ -1,0 +1,243 @@
+.dashboard-page {
+  background: #f8fafc;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dashboard {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Card styling */
+.card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.investment-dashboard h2 {
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.investment-dashboard p {
+  color: #475569;
+  margin-bottom: 20px;
+}
+
+/* Summary cards grid */
+.summary-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.summary-card {
+  flex: 1;
+  min-width: 180px;
+  background: #f1f5f9;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.summary-card h3 {
+  font-size: 1rem;
+  color: #64748b;
+  margin-bottom: 5px;
+}
+
+.summary-card p {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* Buttons */
+button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.refresh-btn {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+.refresh-btn:hover {
+  background-color: #0284c7;
+}
+
+.add-btn {
+  background-color: #2563eb;
+  color: white;
+}
+
+.add-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Investment Form */
+.investment-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.investment-form input {
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  width: 180px;
+}
+
+/* Tables */
+.investments-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.investments-table th,
+.investments-table td {
+  padding: 10px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.investments-table th {
+  background-color: #f1f5f9;
+  color: #64748b;
+}
+
+.investments-table td {
+  color: #334155;
+}
+
+.investments-table td.positive {
+  color: #10b981;
+}
+
+.investments-table td.negative {
+  color: #ef4444;
+}
+
+/* Chart Container */
+.chart-container {
+  margin-top: 20px;
+  background: #f1f5f9;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+/* Suggestions box */
+.suggestions-box {
+  background: #e0f2fe;
+  border-left: 4px solid #0ea5e9;
+  padding: 12px 15px;
+  margin-top: 15px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #0c4a6e;
+}
+
+.suggestions-box ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 5px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .summary-grid {
+    flex-direction: column;
+  }
+
+  .investment-form {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Investments Table Styling */
+.investments-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.investments-table thead {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+.investments-table th,
+.investments-table td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.investments-table tbody tr:nth-child(even) {
+  background-color: #f1f5f9; /* Zebra stripes */
+}
+
+.investments-table tbody tr:hover {
+  background-color: #e0f2fe; /* Hover effect */
+  transform: scale(1.01);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Profit/Loss Coloring */
+.investments-table td {
+  font-weight: 500;
+}
+
+.investments-table td.positive {
+  color: #10b981; /* green */
+}
+
+.investments-table td.negative {
+  color: #ef4444; /* red */
+}
+
+/* Responsive Scroll for Small Screens */
+.investments-table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+}
+
+/* Optional: Sticky header */
+.investments-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}

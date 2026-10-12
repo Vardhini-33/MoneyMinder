@@ -1,0 +1,102 @@
+/* Navbar container */
+.navbar {
+  background-color: #163c8f;
+  color: white;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poppins', Arial, sans-serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+/* Logo */
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.logo a:hover {
+  color: #ffcc00;
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+/* Hover effect */
+.nav-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffcc00;
+  transform: translateY(-2px);
+}
+
+/* Active link indicator */
+.nav-links li a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 3px;
+  background-color: #ffcc00;
+  border-radius: 2px;
+}
+
+/* Click effect */
+.nav-links li a:active {
+  transform: translateY(1px);
+  opacity: 0.85;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    background-color: #163c8f;
+    padding: 10px 0;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    border-radius: 0 0 10px 10px;
+    display: none; /* will show with toggle button if needed */
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li a {
+    padding: 8px 12px;
+  }
+}
+
+/* Optional: subtle navbar hover shadow */
+.navbar:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}

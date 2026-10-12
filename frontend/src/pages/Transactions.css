@@ -1,0 +1,297 @@
+/* Transactions.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+  color: #1e293b;
+}
+
+.finance-dashboard-full {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+header .positive {
+  color: #10b981;
+  font-weight: bold;
+}
+
+header .negative {
+  color: #ef4444;
+  font-weight: bold;
+}
+
+/* Summary Cards */
+.summary-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  flex: 1;
+  min-width: 200px;
+}
+
+.summary-cards .card h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #64748b;
+}
+
+.summary-cards .card p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.income {
+  border-left: 4px solid #10b981;
+}
+
+.expense {
+  border-left: 4px solid #ef4444;
+}
+
+.balance {
+  border-left: 4px solid #3b82f6;
+}
+
+/* Quick Add Buttons */
+.quick-add {
+  display: flex;
+  gap: 10px;
+}
+
+.quick-add button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.income-btn {
+  background-color: #10b981;
+}
+
+.income-btn:hover {
+  background-color: #059669;
+}
+
+.expense-btn {
+  background-color: #ef4444;
+}
+
+.expense-btn:hover {
+  background-color: #dc2626;
+}
+
+/* Add Transaction Form */
+.add-transaction h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.form-grid input,
+.form-grid select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-grid input:focus,
+.form-grid select:focus {
+  border-color: #3b82f6;
+}
+
+.form-grid button {
+  padding: 10px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-grid button:hover {
+  background-color: #2563eb;
+}
+
+/* Search & Filter */
+.filter-search {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter-search input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  outline: none;
+  width: 100%;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-buttons button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+  background-color: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+/* Category Summary */
+.category-summary ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.category-summary li {
+  background-color: #f1f5f9;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* Transactions Table */
+.transactions-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactions-table th,
+.transactions-table td {
+  padding: 12px 10px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.transactions-table th {
+  background-color: #f1f5f9;
+  color: #64748b;
+}
+
+.transactions-table td.expense-amount {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.transactions-table td.income-amount {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.transactions-table tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* Highlight large expenses */
+.transactions-table tr.large-expense {
+  background-color: #fee2e2;
+}
+
+/* Export Section */
+.card input[type="month"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  outline: none;
+  margin-right: 10px;
+  max-width: 200px;
+}
+
+.card button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  background-color: #3b82f6;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background-color: #2563eb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .summary-cards {
+    flex-direction: column;
+  }
+
+  .filter-buttons {
+    flex-wrap: wrap;
+  }
+
+  .card input[type="month"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .card button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
